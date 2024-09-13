@@ -17,7 +17,7 @@ const UseEffectHook = () => {
     return (
         <>
             <div className="table-responsive container">
-                <table className="table table-hover table-stripped table-success">
+                <table className="table table-hover table-stripped table-danger">
                     <thead className="table-dark text-uppercase">
                         <tr>
                             <th>sr.no</th>
