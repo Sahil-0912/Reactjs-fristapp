@@ -1,15 +1,17 @@
 function ProductCard(props) {
     return (
         <>
-            <div className="card my-5 p-2 shadow">
-                <img src={props.image} className='w-100' />
-                <div className="card-body">
-                    <h4>Title:{props.title}</h4>
-                    <span>Price:{props.price}</span>
-                    <p>Decription{props.description}</p>
-                    <h5>Category{props.category}</h5>
+             <div className="card  p-2 h-75 product-data shadow">
+                    <img src={props.image} className="w-100 h-50"/>
+                    <div class="card-body">
+                        <h4 className="text-uppercase">category: {props.category}</h4>
+                        <ul>
+                            <li>Title:{props.title}</li>
+                            <li>Price:{props.price}/-</li>
+                            <li>ratings:{props.rating.rate}, {props.rating.count} <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
         </>
     )
 }

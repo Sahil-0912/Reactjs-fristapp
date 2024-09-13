@@ -19,9 +19,9 @@ function App() {
       {/* <Home></Home> */}
          {/* <About></About> */}
       {/* <Contact></Contact>  */}
-      <Counter></Counter>
-      <ClassState></ClassState>
-    {/* <UseEffectHook></UseEffectHook> */}
+      {/* <Counter></Counter> */}
+      {/* <ClassState></ClassState> */}
+    <UseEffectHook></UseEffectHook>
       <Footer />
 
     </>

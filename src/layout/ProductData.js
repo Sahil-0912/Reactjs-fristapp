@@ -1,5 +1,3 @@
-import ProductCard from "./Productcard"
-
 const productData = 
     [
         {

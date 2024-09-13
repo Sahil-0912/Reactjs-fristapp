@@ -22,9 +22,10 @@ const UseEffectHook = () => {
                             <ProductCard
                                 title={element.title}
                                 price={element.price}
-                                description={element.description}
                                 category={element.category}
                                 image={element.image}
+                                rating={element.rating.rate}
+                                count={element.rating.count}
                             />
                         </div>
                     ))}

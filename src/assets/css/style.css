@@ -86,3 +86,7 @@ footer ul li a {
     background: linear-gradient(90deg, rgba(131,58,180,1) 39%, rgba(252,176,69,1) 100%, rgba(62,13,13,1) 100%);
     border-radius: 10px;
 }
+
+.product-data i{
+    color:burlywood;
+}   
