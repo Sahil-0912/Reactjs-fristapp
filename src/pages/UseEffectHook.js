@@ -1,35 +1,51 @@
-import React from "react"
+import React, { useState } from "react"
 import { useEffect } from "react"
-import ProductCard from "../layout/Productcard"
-import productData from "../layout/ProductData"
+
 
 const UseEffectHook = () => {
+    const [products, setproduct] = useState([])
     async function showapi() {
         const res = await fetch("https://fakestoreapi.com/products")
         const data = await res.json()
         console.table(data)
+        setproduct(data)
     }
     useEffect(() => {
         // console.log("hello");     
         showapi()
-    })
+    }, [])
     return (
         <>
-            <div className="container my-5">
-                <div className="row">
-                    {productData.map((element, index) => (
-                        <div className="col-lg-3" key={index}>
-                            <ProductCard
-                                title={element.title}
-                                price={element.price}
-                                category={element.category}
-                                image={element.image}
-                                rating={element.rating.rate}
-                                count={element.rating.count}
-                            />
-                        </div>
-                    ))}
-                </div>
+            <div className="table-responsive container">
+                <table className="table table-hover table-stripped table-success">
+                    <thead className="table-dark text-uppercase">
+                        <tr>
+                            <th>sr.no</th>
+                            <th>title</th>
+                            <th>price</th>
+                            <th>category</th>
+                            <th>rating</th>
+                            <th>count</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {
+                            products.map((product, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>{index + 1}</td>
+                                        <td>{product.title}</td>
+                                        <td>{product.price}</td>
+                                        <td>{product.category}</td>
+                                        <td>{product.rating.rate}</td>
+                                        <td>{product.rating.count}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
             </div>
         </>
     )
